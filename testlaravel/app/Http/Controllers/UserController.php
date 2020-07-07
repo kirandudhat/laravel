@@ -25,6 +25,7 @@ class UserController extends Controller
       $Users->username = $request->username;
       if($request->hasFile('userphoto'))
       {
+		 // print_r($request); die;
          $uploaded_file = $request->file('userphoto');
          $image_name =$uploaded_file->getClientOriginalName();
          $directory_path = 'storage/app/public/User_image/';
